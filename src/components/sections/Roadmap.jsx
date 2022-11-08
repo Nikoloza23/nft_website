@@ -9,11 +9,11 @@ export function Roadmap() {
           <DrawSvg />
         </SvgContainer>
         <Items>
-          <RoadMapItem/>
-          <RoadMapItem/>
-          <RoadMapItem/>
-          <RoadMapItem/>
-          <RoadMapItem/>
+          <RoadMapItem />
+          <RoadMapItem />
+          <RoadMapItem />
+          <RoadMapItem />
+          <RoadMapItem />
         </Items>
       </Container>
     </Section>
@@ -87,10 +87,9 @@ const Items = styled.ul`
 
       @media (max-width: 48em) {
         border-radius: 0 50px 0 50px;
-      text-align: left;
+        text-align: left;
         p {
           border-radius: 0 40px 0 40px;
-
         }
       }
     }
@@ -106,23 +105,23 @@ const Items = styled.ul`
     div {
       border-radius: 0 50px 0 50px;
       text-align: left;
-
-      
     }
     p {
       border-radius: 0 40px 0 40px;
     }
   }
 `;
-const RoadMapItem = ({subtitle,subtext}) => {
-  return <Item>
-    <ItemContainer>
-<Box>
-  <SubTitle>Subtitle</SubTitle>
-  <Text>subtext</Text>
-</Box>
-    </ItemContainer>
-  </Item>;
+const RoadMapItem = ({ subtitle, subtext }) => {
+  return (
+    <Item>
+      <ItemContainer>
+        <Box>
+          <SubTitle>Subtitle</SubTitle>
+          <Text>subtext</Text>
+        </Box>
+      </ItemContainer>
+    </Item>
+  );
 };
 const Item = styled.li`
   width: 100%;
@@ -140,7 +139,6 @@ const ItemContainer = styled.div`
 
   @media (max-width: 48em) {
     width: 70%;
-
   }
 `;
 const Box = styled.p`

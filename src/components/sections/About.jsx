@@ -3,34 +3,34 @@ import { Button } from "../Button";
 import { Dark } from "../../styles/Themes";
 import { lazy, Suspense } from "react";
 import { Loading } from "../Loading";
-const  Carousel  = lazy(() => import("../Carousel"));
+const Carousel = lazy(() => import("../Carousel"));
 export function About() {
   return (
     <Section id="about">
       <Container>
         <Box>
-          <Suspense fallback={<Loading/>}>
+          <Suspense fallback={<Loading />}>
             <Carousel />
           </Suspense>
         </Box>
         <Box>
           <Title>
-            Bienvenido al club <br /> de los bichos raros
+            Welcome To The Weirdos Club. <br />
           </Title>
           <SubText>
-            WEIRDOS CLUB es una colección privada: coleccionables digitales
-            únicos. Los Weirdos se almacenan como tokens ERC-721 en la cadena de
-            bloques de Ethereum y se alojan en IPFS
+            The WEIRDOS CLUB is a private collection of NFTs—unique digital
+            collectibles. The Weirdos are stored as ERC-721 tokens on the
+            Ethereum blockchain and hosted on IPFS.
           </SubText>
           <SubTextLight>
-            Con más de 200 rasgos dibujados a mano, cada NFT es único y viene
-            con una membresía a un grupo exclusivo de inversores exitosos. Únase
-            a una ambiciosa comunidad en constante crecimiento con múltiples
-            beneficios y utilidades.
+            With more than 200+ hand drawn traits, each NFT is unique and comes
+            with a membership to an exclusive group of successful investors.
+            Join an ambitious ever-growing community with multiple benefits and
+            utilities.
           </SubTextLight>
           <ButtonContainer>
             <ThemeProvider theme={Dark}>
-              <Button text="UNIRSE A DISCORD" link="#" />
+              <Button text="JOIN OUR DISCORD" link="#" />
             </ThemeProvider>
           </ButtonContainer>
         </Box>

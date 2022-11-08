@@ -10,16 +10,14 @@ import img8 from "../../assets/Nfts/bighead-7.svg";
 import img9 from "../../assets/Nfts/bighead-8.svg";
 import { ConfettiComponent } from "../Confetti";
 
-
 const MemberComponent = ({ img, name = " ", position = " " }) => {
   return (
     <Item>
       <ImageContainer>
-        <img width={500} height={400} src={img} alt={name}/>
+        <img width={500} height={400} src={img} alt={name} />
       </ImageContainer>
       <Name>{name}</Name>
       <Position>{position}</Position>
-
     </Item>
   );
 };
@@ -27,19 +25,27 @@ const MemberComponent = ({ img, name = " ", position = " " }) => {
 export function Team() {
   return (
     <Section id="team">
-       <ConfettiComponent/>
+      <ConfettiComponent />
       <Title>Team</Title>
       <Container>
-        <MemberComponent img={img1}  name="SKYBLAZE" position="founder"/>
-        <MemberComponent img={img2}  name="MEGNUM" position="Co-Founder" />
-        <MemberComponent img={img3}  name="MONKEY KING" position="Director" />
-        <MemberComponent img={img4}  name="BLACK PANTHER" position="manager" />
-        <MemberComponent img={img5}  name="DEATHSTROKE" position="artist" />
-        <MemberComponent img={img6}  name="LAZY KONG" position="social media manager" />
-        <MemberComponent img={img7}  name="CYBER PUNK" position="Blockchain Specialist" />
-        <MemberComponent img={img8}  name="MONK" position="Web3 Developer" />
-        <MemberComponent img={img9}  name="BANANA" position="Graphic Designer" />
-        <MemberComponent img={img4}  name="BLACK PANTHER" position="manager" />
+        <MemberComponent img={img1} name="SKYBLAZE" position="founder" />
+        <MemberComponent img={img2} name="MEGNUM" position="Co-Founder" />
+        <MemberComponent img={img3} name="MONKEY KING" position="Director" />
+        <MemberComponent img={img4} name="BLACK PANTHER" position="manager" />
+        <MemberComponent img={img5} name="DEATHSTROKE" position="artist" />
+        <MemberComponent
+          img={img6}
+          name="LAZY KONG"
+          position="social media manager"
+        />
+        <MemberComponent
+          img={img7}
+          name="CYBER PUNK"
+          position="Blockchain Specialist"
+        />
+        <MemberComponent img={img8} name="MONK" position="Web3 Developer" />
+        <MemberComponent img={img9} name="BANANA" position="Graphic Designer" />
+        <MemberComponent img={img4} name="BLACK PANTHER" position="manager" />
       </Container>
     </Section>
   );
@@ -128,21 +134,21 @@ const ImageContainer = styled.div`
 `;
 
 const Name = styled.h2`
-font-size: ${props => props.theme.fontlg};
-display: flex;
-align-items: center;
-justify-content: center;
-text-transform: uppercase;
-color: ${props => props.theme.text};
-margin-top: 1rem;
-`
+  font-size: ${(props) => props.theme.fontlg};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.text};
+  margin-top: 1rem;
+`;
 
 const Position = styled.h2`
-font-size: ${props => props.theme.fontmd};
-display: flex;
-align-items: center;
-justify-content: center;
-text-transform: capitalize;
-color: ${props => `rgba(${props.theme.textRgba},0.9)`};
-font-weight:400;
-`
+  font-size: ${(props) => props.theme.fontmd};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  color: ${(props) => `rgba(${props.theme.textRgba},0.9)`};
+  font-weight: 400;
+`;

@@ -22,11 +22,10 @@ export function Navegation() {
         ></HamburgerMenu>
         <Menu click={click}>
           <MenuItem onClick={() => scrollTo("home")}> Home</MenuItem>
-          <MenuItem onClick={() => scrollTo("about")}> Acerca de</MenuItem>
-          <MenuItem onClick={() => scrollTo("roadmap")}> RoadMap</MenuItem>
-          <MenuItem onClick={() => scrollTo("cards")}> Cards</MenuItem>
-          <MenuItem onClick={() => scrollTo("team")}> Equipo</MenuItem>
-          <MenuItem onClick={() => scrollTo("preguntas")}> Preguntas</MenuItem>
+          <MenuItem onClick={() => scrollTo("about")}> About</MenuItem>
+          <MenuItem onClick={() => scrollTo("roadmap")}> Roadmap</MenuItem>
+          <MenuItem onClick={() => scrollTo("cards")}> Showcase</MenuItem>
+          <MenuItem onClick={() => scrollTo("team")}> Team</MenuItem>
         </Menu>
       </NavBar>
     </Section>

@@ -1,10 +1,10 @@
 import styled, { keyframes } from "styled-components";
 
-import imgreact from "../../assets/react.png";
+import rounded from "../../assets/Nfts/Rounded-Text-Black.png";
 import { lazy, Suspense } from "react";
 import { Loading } from "../../components/Loading";
 const TypeWriterText = lazy(() => import("../TypeWriterText"));
-const CoverVideo= lazy(()=>import("../CoverVideo"))
+const CoverVideo = lazy(() => import("../CoverVideo"));
 
 export function Home() {
   return (
@@ -16,13 +16,12 @@ export function Home() {
           </Suspense>
         </Box>
         <Box>
-        <Suspense fallback={<Loading />}>
-        <CoverVideo />
+          <Suspense fallback={<Loading />}>
+            <CoverVideo />
           </Suspense>
-        
         </Box>
         <Round>
-          <img src={imgreact} width={500} height={400} alt="React" />
+          <img src={rounded} width={500} height={400} />
         </Round>
       </Container>
     </Section>

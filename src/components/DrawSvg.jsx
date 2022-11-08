@@ -2,53 +2,51 @@ import styled, { keyframes } from "styled-components";
 import Vector from "./icons/Vector";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useLayoutEffect,useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 export function DrawSvg() {
-    const ref = useRef(null);
-    const ballRef = useRef(null);
+  const ref = useRef(null);
+  const ballRef = useRef(null);
 
-    gsap.registerPlugin(ScrollTrigger);
-    useLayoutEffect(()=>{
-        let element = ref.current;
+  gsap.registerPlugin(ScrollTrigger);
+  useLayoutEffect(() => {
+    let element = ref.current;
 
-        let svg = document.getElementsByClassName("svg-path")[0];
+    let svg = document.getElementsByClassName("svg-path")[0];
 
-        const length = svg.getTotalLength();
+    const length = svg.getTotalLength();
 
-        //comenzar a posicionar el dibujo svg
-        svg.style.strokeDasharray = length;
+    //comenzar a posicionar el dibujo svg
+    svg.style.strokeDasharray = length;
 
-        // Ocultar svg antes de comenzar a desplazarse
-        svg.style.strokeDashoffset = length;
+    // Ocultar svg antes de comenzar a desplazarse
+    svg.style.strokeDashoffset = length;
 
-
-        let recorrido = gsap.timeline({
-            scrollTrigger:{
-                trigger:element,
-                start:"top center",
-                end:"bottom bottom",
-                onUpdate:(self)=>{
-                    const draw = length*self.progress;
-                    svg.style.strokeDashoffset=length-draw;
-                },
-                onToggle: self=>{
-                    if(self.isActive){
-                        ballRef.current.style.display="none"
-                    }else{
-                        ballRef.current.style.display="inline-block"  
-                    }
-                }
-            }
-        })
-        return ()=>{
-            if(recorrido) recorrido.kill();
-        }
-        
-    },[])
+    let recorrido = gsap.timeline({
+      scrollTrigger: {
+        trigger: element,
+        start: "top center",
+        end: "bottom bottom",
+        onUpdate: (self) => {
+          const draw = length * self.progress;
+          svg.style.strokeDashoffset = length - draw;
+        },
+        onToggle: (self) => {
+          if (self.isActive) {
+            ballRef.current.style.display = "none";
+          } else {
+            ballRef.current.style.display = "inline-block";
+          }
+        },
+      },
+    });
+    return () => {
+      if (recorrido) recorrido.kill();
+    };
+  }, []);
 
   return (
     <>
-      <Ball ref={ballRef}/>
+      <Ball ref={ballRef} />
       <VectorContainer ref={ref}>
         <Vector />
       </VectorContainer>

@@ -5,7 +5,7 @@ export default function TypeWriterText() {
   return (
     <>
       <Title>
-        Aprende react creando proyectos
+        Discover A New Era Of Cool
         <Typewriter
           options={{
             autoStart: true,
@@ -13,22 +13,22 @@ export default function TypeWriterText() {
           }}
           onInit={(typewriter) => {
             typewriter
-              .typeString(`<span class="text-1">Divertidos</span>`)
+              .typeString(`<span class="text-1">NFTS.|</span>`)
               .pauseFor(500)
               .deleteAll()
-              .typeString(`<span class="text-2">Increibles</span>`)
+              .typeString(`<span class="text-2">COLLECTIBLE ITEMS.|</span>`)
               .pauseFor(500)
               .deleteAll()
-              .typeString(`<span class="text-3">Y reutilizables!</span>`)
+              .typeString(`<span class="text-3">APE KILLERS!|</span>`)
               .pauseFor(500)
               .deleteAll()
               .start();
           }}
         ></Typewriter>
       </Title>
-      <SubTitle>React Es Cool 😎💙.</SubTitle>
+      <SubTitle>Bored Of Apes? Try Something New😎</SubTitle>
       <ButtonContainer>
-        <Button text="Explorar curso" link="https://www.udemy.com/course/react-intensivo-desde-cero-y-actualizado-para-principiantes/?couponCode=E46E575E9C9E84FE7683"/>
+        <Button text="Explore" link="https://opensea.io/" />
       </ButtonContainer>
     </>
   );
@@ -40,7 +40,7 @@ const Title = styled.h2`
   color: ${(props) => props.theme.text};
   align-self: flex-start;
   transition: all 0.5s ease-in-out;
-  span{
+  span {
     text-transform: uppercase;
     font-family: "Akaya Telivigala", cursive;
   }

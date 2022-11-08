@@ -5,6 +5,7 @@ import img3 from "../assets/Nfts/bighead-2.svg";
 import img4 from "../assets/Nfts/bighead-3.svg";
 import img5 from "../assets/Nfts/bighead-4.svg";
 import img6 from "../assets/Nfts/bighead-5.svg";
+
 export function Banner() {
   return (
     <Section>
@@ -17,14 +18,11 @@ export function Banner() {
         <img width={500} height={400} src={img6} alt="-" />
       </ImgContainer>
       <Title>
-        Adquiere el curso <br /> de REACT{" "}
+        Join The <br /> Weirdos Club
       </Title>
       <BtnContainer>
-        <a
-          href="https://www.udemy.com/course/react-intensivo-desde-cero-y-actualizado-para-principiantes/?couponCode=E46E575E9C9E84FE7683"
-          target="_blank"
-        >
-          <JoiNow>Adquirir</JoiNow>
+        <a href="https://opensea.io/" target="_blank">
+          <JoiNow>Join Now</JoiNow>
         </a>
       </BtnContainer>
     </Section>
@@ -79,7 +77,7 @@ const Title = styled.h1`
   color: ${(props) => props.theme.body};
   padding: 1rem 2rem;
   z-index: 10;
-  width: 35%;
+  width: 45%;
   text-transform: capitalize;
 
   text-shadow: 1px 1px 2px ${(props) => props.theme.text};

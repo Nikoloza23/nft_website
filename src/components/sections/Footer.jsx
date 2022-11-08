@@ -4,7 +4,7 @@ import Facebook from "../Icons/Facebook";
 import LinkedIn from "../Icons/LinkedIn";
 import Twitter from "../Icons/Twitter";
 import Instagram from "../Icons/Instagram";
-import {Banner} from "../Banner"
+import { Banner } from "../Banner";
 export function Footer() {
   const scrollTo = (id) => {
     let element = document.getElementById(id);
@@ -16,7 +16,7 @@ export function Footer() {
   };
   return (
     <Section>
-        <Banner/>
+      <Banner />
       <Container>
         <Left>
           <Logo />
@@ -37,21 +37,14 @@ export function Footer() {
         </Left>
         <MenuItems>
           <Item onClick={() => scrollTo("home")}>Home</Item>
-          <Item onClick={() => scrollTo("about")}>Acerca de</Item>
-          <Item onClick={() => scrollTo("roadmap")}>Mapeado</Item>
-          <Item onClick={() => scrollTo("cards")}>Tarjetas</Item>
-          <Item onClick={() => scrollTo("team")}>Equipo</Item>
-          <Item onClick={() => scrollTo("preguntas")}>Preguntas</Item>
+          <Item onClick={() => scrollTo("roadmap")}>Roadmap</Item>
+          <Item onClick={() => scrollTo("team")}>Team</Item>
+          <Item onClick={() => scrollTo("about")}>About</Item>
+          <Item onClick={() => scrollTo("cards")}>Showcase</Item>
         </MenuItems>
       </Container>
       <Bottom>
         <span>&copy; {new Date().getFullYear()}</span>
-        <span>
-          React &#10084;{" "}
-          <a href="https://codigo369.com/" tarjet="_blank">
-            codigo369.com
-          </a>
-        </span>
       </Bottom>
     </Section>
   );
@@ -142,17 +135,4 @@ const Bottom = styled.div`
   justify-content: space-between;
   align-items: center;
   font-size: ${(props) => props.theme.fontlg};
-
-  a {
-    text-decoration: underline;
-  }
-  @media (max-width: 48em) {
-    flex-direction: column;
-    width: 100%;
-    font-size: ${(props) => props.theme.fontmd};
-
-    span {
-      margin-bottom: 1rem;
-    }
-  }
 `;

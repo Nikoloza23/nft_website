@@ -7,18 +7,16 @@ import img5 from "../../assets/Nfts/bighead-4.svg";
 import img6 from "../../assets/Nfts/bighead-5.svg";
 import img7 from "../../assets/Nfts/bighead-6.svg";
 import img8 from "../../assets/Nfts/bighead-7.svg";
-import img9 from "../../assets/Nfts/bighead-8.svg";
-import img10 from "../../assets/Nfts/bighead-9.svg";
 import ETH from "../../assets/icons8-ethereum-48.png";
 import { useRef } from "react";
 
 const NftItem = ({ img, number = 0, price = 0, passRef }) => {
   let play = (e) => {
     passRef.current.style.animationPlayState = "running";
-  }
+  };
   let pause = (e) => {
     passRef.current.style.animationPlayState = "paused";
-  }
+  };
 
   return (
     <ImgContainer onMouseOver={(e) => pause(e)} onMouseOut={(e) => play(e)}>
@@ -44,15 +42,15 @@ export function Showcase() {
   const Row1Ref = useRef(null);
   const Row2Ref = useRef(null);
   return (
-    <Section id ="cards">
-      <Row direction="none" ref ={Row1Ref}>
+    <Section id="cards">
+      <Row direction="none" ref={Row1Ref}>
         <NftItem img={img1} number={847} price={1.5} passRef={Row1Ref} />
         <NftItem img={img2} number={447} price={1.6} passRef={Row1Ref} />
         <NftItem img={img3} number={747} price={1.8} passRef={Row1Ref} />
         <NftItem img={img4} number={747} price={1.8} passRef={Row1Ref} />
         <NftItem img={img5} number={747} price={1.8} passRef={Row1Ref} />
       </Row>
-      <Row direction="reverse" ref ={Row2Ref}>
+      <Row direction="reverse" ref={Row2Ref}>
         <NftItem img={img6} number={847} price={1.5} passRef={Row2Ref} />
         <NftItem img={img7} number={447} price={1.6} passRef={Row2Ref} />
         <NftItem img={img8} number={747} price={1.8} passRef={Row2Ref} />

@@ -7,7 +7,6 @@ import { About } from "../components/sections/About";
 import { Roadmap } from "../components/sections/Roadmap";
 import { Showcase } from "../components/sections/Showcase";
 import { Team } from "../components/sections/Team";
-import { Preguntas } from "../components/sections/Preguntas";
 import { Footer } from "../components/sections/Footer";
 import { ScrollToTop } from "../components/ScrollToTop";
 
@@ -17,15 +16,13 @@ export function MenuPrincipal() {
       <GlobalStyles />
       <ThemeProvider theme={Light}>
         <Navegation />
-        <Home/>
-        <About/>
-        <Roadmap/>
-        <Showcase/>
-        <Team/>
-        <Preguntas/>
-        <Footer/>
-        <ScrollToTop/>{" "}
-
+        <Home />
+        <About />
+        <Roadmap />
+        <Showcase />
+        <Team />
+        <Footer />
+        <ScrollToTop />{" "}
       </ThemeProvider>
     </main>
   );

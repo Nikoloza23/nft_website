@@ -23,9 +23,9 @@ const Btn = styled.button`
     transform: scale(0.9);
   }
 
-  &::after{
+  &::after {
     content: " ";
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
@@ -35,12 +35,11 @@ const Btn = styled.button`
     border-radius: 50px;
     transition: all 0.2s ease;
   }
-  &:hover::after{
+  &:hover::after {
     transform: translate(-50%, -50%) scale(1);
     padding: 0.3rem;
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontsm};
   }
-  
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export function Logo() {
   return (<LogoText>
 <Link to="/">
-    R.
+    N.
 </Link>
   </LogoText>);
 }
